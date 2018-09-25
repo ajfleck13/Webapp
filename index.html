@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="navbar">
+    <button id="navview" class="textbutton">View</button><br>
+    <button id="navadd" class="textbutton">Add</button><br>
+    <button id="navverify" class="textbutton">Verify</button><br>
+    <button id="navupdate" class="textbutton">Update</button><br>
+    <button id="navdelete" class="textbutton">Delete</button><br>
+  </div>
+
+  <div class="rightcontainer">
+    <div id="addbar" class="interactbar">
+      <h2>Add Entry</h2>
+      <input type="text" id="addname">
+      <input type="text" id="addofficenumber">
+      <input type="text" id="addphonenumber">
+      <button id="Addcomplete">Add</button><br>
+    </div>
+
+    <div id="verifybar" class="interactbar">
+      <h2>Verify Entry</h2>
+      <input type="text" id="verifyname">
+      <button id="Verifycomplete">Verify</button><br>
+    </div>
+
+    <div id="updatebar" class="interactbar">
+      <h2>Update Entry</h2>
+      <p>Update Name</p>
+      <input type="text" id="updatenamestart">
+      <br>
+      <p>Update Values</p>
+      <input type="text" id="updatenameend">
+      <input type="text" id="updateofficenumberend">
+      <input type="text" id="updatephonenumberend"><br>
+      <button id="Updatecomplete">Update</button><br>
+    </div>
+
+    <div id="deletebar" class="interactbar">
+      <h2>Delete Entry</h2>
+      <input type="text" id="deletename">
+      <button id="Deletecomplete">Delete</button><br>
+    </div>
+
+    <div class="content"></div>
+  </div>
+  <script src="dom.js"></script>
+  <script src="employeeList.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
