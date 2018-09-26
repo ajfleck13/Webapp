@@ -148,44 +148,46 @@ let deleteEmployee = function () {
 
 $("#Deletecomplete").on('click', deleteEmployee);
 
-const viewLayout = function() {
+const resetLayout = function() {
     document.getElementById('addbar').style.display = 'none';
     document.getElementById('verifybar').style.display = 'none';
     document.getElementById('updatebar').style.display = 'none';
     document.getElementById('deletebar').style.display = 'none';
+    document.getElementById('navview').style.color = 'white';
+    document.getElementById('navadd').style.color = 'white';
+    document.getElementById('navverify').style.color = 'white';
+    document.getElementById('navupdate').style.color = 'white';
+    document.getElementById('navdelete').style.color = 'white';
     renderEmployeeList();
+}
+
+const viewLayout = function() {
+    resetLayout();
+    document.getElementById('navview').style.color = 'yellow';
 }
 
 const addLayout = function() {
+    resetLayout();
     document.getElementById('addbar').style.display = 'block';
-    document.getElementById('verifybar').style.display = 'none';
-    document.getElementById('updatebar').style.display = 'none';
-    document.getElementById('deletebar').style.display = 'none';
-    renderEmployeeList();
+    document.getElementById('navadd').style.color = 'yellow';
 }
 
 const verifyLayout = function() {
-    document.getElementById('addbar').style.display = 'none';
+    resetLayout();
     document.getElementById('verifybar').style.display = 'block';
-    document.getElementById('updatebar').style.display = 'none';
-    document.getElementById('deletebar').style.display = 'none';
-    renderEmployeeList();
+    document.getElementById('navverify').style.color = 'yellow';
 }
 
 const updateLayout = function() {
-    document.getElementById('addbar').style.display = 'none';
-    document.getElementById('verifybar').style.display = 'none';
+    resetLayout();
     document.getElementById('updatebar').style.display = 'block';
-    document.getElementById('deletebar').style.display = 'none';
-    renderEmployeeList();
+    document.getElementById('navupdate').style.color = 'yellow';
 }
 
 const deleteLayout = function() {
-    document.getElementById('addbar').style.display = 'none';
-    document.getElementById('verifybar').style.display = 'none';
-    document.getElementById('updatebar').style.display = 'none';
+    resetLayout();
     document.getElementById('deletebar').style.display = 'block';
-    renderEmployeeList();
+    document.getElementById('navdelete').style.color = 'yellow';
 }
 
 $("#navview").on('click', viewLayout);
