@@ -2,17 +2,23 @@ h1 {
     font-size: 40px;
     line-height: 52px;
     font-weight: bold;
+    text-align: center;
 }
 
 h2 {
     font-size: 32px;
     line-height: 40px;
     font-weight: bold;
+    text-align: center;
 }
 
 p {
     font-size: 24px;
     line-height: 40px;
+}
+
+hr {
+    margin: 24px 0px;
 }
 
 .navbar {

@@ -135,14 +135,17 @@ let deleteEmployee = function () {
         {
             if(namevalue === employeeList[i].name)
             {
-                employeeList.slice(i, 1);
+                employeeList.splice(i, 1);
+                console.log(i);
                 content.append(`<h1>Deleted entry with employee name ${namevalue}</h1>`);
                 name.val("");
+                renderEmployeeList();
                 return;
             }
         }
         content.append(`<h1>No employee found with name ${namevalue}</h1>`);
         name.val("");
+        renderEmployeeList();
     }
 }
 
