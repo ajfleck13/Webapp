@@ -86,8 +86,8 @@ let updateEmployee = function () {
         return;
     }
 
-    oldname.val("");
     let entry = getEmployeeEntry(oldname.val());
+    oldname.val("");
 
     if(!entry)
     {
@@ -97,9 +97,9 @@ let updateEmployee = function () {
     let content = $(".content");
     content.empty();
 
-    let newname = $("#updatenameend").val();
-    let newoffice = $("#updateofficenumberend").val();
-    let newnumber = $("#updatephonenumberend").val();
+    let newname = $("#updatenameend");
+    let newoffice = $("#updateofficenumberend");
+    let newnumber = $("#updatephonenumberend");
 
     if(newname.val())
     {
@@ -116,6 +116,7 @@ let updateEmployee = function () {
     if(newnumber.val())
     {
         entry.newnumber = newnumber.val();
+        newnumber.val("");
     }
 
     content.append(`<h1>Updated entry for employee ${oldname.val()}!</h1>`);
