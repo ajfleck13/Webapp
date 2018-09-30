@@ -136,9 +136,9 @@ let deleteEmployee = function () {
         {
             if(namevalue === employeeList[i].name)
             {
-                employeeList.splice(i, 1);
-                console.log(i);
                 content.append(`<h1>Deleted entry with employee name ${namevalue}</h1>`);
+                renderEmployeeEntry(employeeList[i]);
+                employeeList.splice(i, 1);
                 name.val("");
                 return;
             }
